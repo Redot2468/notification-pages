@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-unread: #f6fafd;
+  --color-secondary-read: #fff;
+  --color-notificationtype: #5b5d69;
+  --color-time: #9ca1a7;
+  --color-message: #66676c;
+  --color-message-hover: #e5eff9;
+  --color-name: #07070f;
+  --color-white: #fff;
+  --color-hover: #20397b;
+  --color-red-dot: #ff4647;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* notification body */
+
+.notification {
+  display: flex;
+  border: 1px solid green;
+  padding: 0 0.5rem 0 2rem;
+  background: var(--color-primary-unread);
+  border-radius: 5px;
+}
+
+.display__picture {
+  width: 12%;
+  border: 1px solid green;
+  align-self: flex-start;
+  margin-top: 1.7rem;
+}
+
+.display__picture img {
+  height: 45px;
+}
+
+.notification__body {
+  width: 100%;
+  border: 1px solid green;
+  margin-left: 1.5rem;
+}
+
+.sender__name {
+  font-weight: 700;
+  color: var(--color-name);
+}
+
+.notification__type {
+  margin-bottom: 0.8rem;
+  color: var(--color-notificationtype);
+  word-spacing: 0.5px;
+}
+
+.notification__post {
+  color: #4a4e57;
+  font-weight: 550;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.notification__post:hover {
+  color: var(--color-hover);
+}
+
+.notification__sent-time {
+  margin-top: 0;
+  color: var(--color-time);
+}
