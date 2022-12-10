@@ -26,6 +26,31 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.5;
   font-weight: 500;
+  background: #f9fafe;
+  padding: 7rem;
+}
+
+h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.2;
+  font-size: 2rem;
+}
+
+/* container */
+.container {
+  max-width: 600px;
+  padding: 2rem;
+  margin: auto;
+  background: var(--color-white);
+  box-shadow: 0 0 40px rgb(228, 229, 230);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    margin: auto;
+    padding: 2rem 3rem;
+  }
 }
 
 /* notification body */
@@ -35,11 +60,12 @@ body {
   border: 1px solid green;
   padding: 0 0.5rem 0 2rem;
   background: var(--color-primary-unread);
-  border-radius: 5px;
+  border-radius: 8px;
+  margin-top: 2rem;
 }
 
 .display__picture {
-  width: 12%;
+  width: fit-content;
   border: 1px solid green;
   align-self: flex-start;
   margin-top: 1.7rem;
@@ -53,6 +79,8 @@ body {
   width: 100%;
   border: 1px solid green;
   margin-left: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 0.5rem;
 }
 
 .sender__name {
@@ -64,8 +92,12 @@ body {
   margin-bottom: 0.8rem;
   color: var(--color-notificationtype);
   word-spacing: 0.5px;
+  cursor: pointer;
 }
 
+.red__dot {
+  width: 70px;
+}
 .notification__post {
   color: #4a4e57;
   font-weight: 550;
@@ -80,4 +112,57 @@ body {
 .notification__sent-time {
   margin-top: 0;
   color: var(--color-time);
+}
+
+.notification__message {
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 10px;
+  padding: 2rem;
+  color: var(--color-message);
+  box-shadow: 0 0 50px 10px rgb(245, 252, 252);
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.notification__message:hover {
+  background: var(--color-message-hover);
+}
+
+.notification__type .fa-circle {
+  font-size: 0.8rem;
+  color: var(--color-red-dot);
+}
+
+@media screen and (min-width: 768px) {
+  .notification__message {
+    max-width: 550px;
+  }
+}
+
+/* notifications header */
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.notification__header {
+  color: var(--color-name);
+}
+
+.notification__counter {
+  background: var(--color-hover);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 7px;
+}
+.mark__read {
+  justify-self: right;
+  color: var(--color-notificationtype);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.mark__read:hover {
+  color: var(--color-hover);
 }
