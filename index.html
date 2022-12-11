@@ -1,51 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A notification page challenge from frontend mentor"
+    />
+    <title>Notification - Page</title>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/bbec75341f.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Notifications page</title>
+    <!-- google font services -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;500;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="container">
+      <header class="header">
+        <h1 class="notification__header">
+          Notifications <span class="notification__counter">7</span>
+        </h1>
 
-  Notifications 3
+        <p class="mark__read">Mark all as read</p>
+      </header>
 
-  Mark all as read
+      <!-- notifications -->
+      <!-- mark webber -->
+      <div class="notification">
+        <div class="display__picture">
+          <img
+            src="./assets/images/avatar-mark-webber.webp"
+            alt="display picture"
+          />
+        </div>
 
-  Mark Webber reacted to your recent post My first tournament today!
-  1m ago
+        <aside class="notification__body">
+          <p class="notification__type">
+            <span class="sender__name">Mark Webber</span> reacted to your recent
+            post
+            <span class="notification__post"> My first tournament today!</span>
+            <i class="fa-solid fa-circle"></i>
+          </p>
+          <p class="notification__sent-time">1m ago</p>
+        </aside>
+      </div>
 
-  Angela Gray followed you
-  5m ago
+      <!-- angela gray -->
 
-  Jacob Thompson has joined your group Chess Club
-  1 day ago
+      <div class="notification">
+        <div class="display__picture">
+          <img
+            src="./assets/images/avatar-angela-gray.webp"
+            alt="display picture"
+          />
+        </div>
 
-  Rizky Hasanuddin sent you a private message
-  5 days ago
-  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
-  I'm already having lots of fun and improving my game.
+        <aside class="notification__body">
+          <p class="notification__type">
+            <span class="sender__name">Angela Gray</span> followed you
+            <i class="fa-solid fa-circle"></i>
+          </p>
+          <p class="notification__sent-time">5m ago</p>
+        </aside>
+      </div>
 
-  Kimberly Smith commented on your picture
-  1 week ago
+      <!-- Jacob thompson -->
 
-  Nathan Peterson reacted to your recent post 5 end-game strategies to increase your win rate
-  2 weeks ago
+      <div class="notification">
+        <div class="display__picture">
+          <img
+            src="./assets/images/avatar-jacob-thompson.webp"
+            alt="display picture"
+          />
+        </div>
 
-  Anna Kim left the group Chess Club
-  2 weeks ago
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <aside class="notification__body">
+          <p class="notification__type">
+            <span class="sender__name">Jacob Thompson</span> has joined your
+            group
+            <span class="notification__post"> Chess Club</span>
+            <i class="fa-solid fa-circle"></i>
+          </p>
+          <p class="notification__sent-time">1 day ago</p>
+        </aside>
+      </div>
+
+      <!-- rizky hasanuddin -->
+
+      <div class="notification">
+        <div class="display__picture">
+          <img
+            src="./assets/images/avatar-rizky-hasanuddin.webp"
+            alt="display picture"
+          />
+        </div>
+
+        <aside class="notification__body">
+          <p class="notification__type">
+            <span class="sender__name">Rizky Hasanuddin</span> sent you a
+            private message
+            <i class="fa-solid fa-circle"></i>
+          </p>
+          <p class="notification__sent-time">5 days ago</p>
+          <p class="notification__message">
+            Hello, thanks for setting up the Chess Club. I've been a member for
+            a few weeks now and I'm already having lots of fun and improving my
+            game.
+          </p>
+        </aside>
+      </div>
+
+      <!-- kimberly smith -->
+
+      <div class="notification">
+        <div class="display__picture">
+          <img
+            src="./assets/images/avatar-kimberly-smith.webp"
+            alt="display picture"
+          />
+        </div>
+
+        <aside class="notification__body">
+          <p class="notification__type">
+            <span class="sender__name">Kimberly Smith</span> commented on your
+            picture
+            <i class="fa-solid fa-circle"></i>
+          </p>
+          <p class="notification__sent-time">1 week ago</p>
+        </aside>
+      </div>
+
+      <!-- nathan peterson -->
+
+      <div class="notification">
+        <div class="display__picture">
+          <img
+            src="./assets/images/avatar-nathan-peterson.webp"
+            alt="display picture"
+          />
+        </div>
+
+        <aside class="notification__body">
+          <p class="notification__type">
+            <span class="sender__name">Nathan Peterson</span> reacted to your
+            recent post
+            <span class="notification__post">
+              5 end-game strategies to increase your win rate</span
+            >
+            <i class="fa-solid fa-circle"></i>
+          </p>
+          <p class="notification__sent-time">2 weeks ago</p>
+        </aside>
+      </div>
+
+      <!--  anna kim-->
+
+      <div class="notification">
+        <div class="display__picture">
+          <img
+            src="./assets/images/avatar-anna-kim.webp"
+            alt="display picture"
+          />
+        </div>
+
+        <aside class="notification__body">
+          <p class="notification__type">
+            <span class="sender__name">Anna Kim</span> left the group
+            <span class="notification__post"> Chess Club</span>
+            <i class="fa-solid fa-circle"></i>
+          </p>
+          <p class="notification__sent-time">2 weeks ago</p>
+        </aside>
+      </div>
+    </div>
+
+    <!-- scripts -->
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>
